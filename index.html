@@ -1,0 +1,203 @@
+
+
+<!-- remember to enter comments -->
+<!--cmd/ is shortcut-->
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr"> <!--direction of letters , left to right https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/dir-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator</title>
+    <!--connect to fontawesome to allo i button to work-->
+    <!--from google fonts, click font, select font, copy links-->
+    <script src="https://kit.fontawesome.com/e981e51be8.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <!--from google fonts, click font, select font, copy links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <!--<script type="text/javascript" src="app.js"></script>  --- future unit 9.3.5 says you can 1, put at end of body (most common) or 
+    2. add an event listener to top of JS to wait for dom to load or 3. or add event listener to load everything based on window being loaded-->
+    <link rel="stylesheet" href="app.css">
+   <!--added style in this head to practice outside of app.css-->
+        <style>
+          h1 {
+            text-align: center;
+            color:rgb(132, 62, 224);
+            background-color: aliceblue;
+            <!--see google fonts for other external font families curriculum 3.1.11-->
+            <!--see app.css for H1 font-family-->
+            <!--see app.css for H1 , practice text decoration-->
+            <!--vh vp 3.1.9 in curriculum-->
+            font-weight: 900;
+            font-size: 5vw; <!--scales text size as viewport changes (vw) size (relative)-->
+            line-height: 1;
+            <!--MDN for more text and font size properties
+              MDN for other options on font size properties, css units-->
+            
+          }
+        </style>
+  </head>
+  <body> <!--https://developer.mozilla.org/en-US/docs/Web/HTML to read about html and elements-->
+    <header>
+      <nav>
+<!--add a nav bar , see exercise 2 for code reference and 3.4.4 for flexbox
+see code at bottom of page on app.css-->  
+<a href="Home">Home</a>
+<a href="About">About</a>
+<a href="Other Exercises">Other Exercises</a>
+      </nav>
+      <h1>  <i> Meme Generator </i> </h1> 
+      <!--should go back and add a nav bar , see exercise 2 for code reference and 3.4.4 for flexbox-->  
+      <hr>
+        <form id="userInput">
+        <label>
+          <span>I agree to the terms of service
+          <input name="termOfService" type="checkbox" required> 
+          <a href="termsOfService.html">Read our terms of service</a>
+          </span>
+        </label>
+        <br><br>
+        <label>
+          <span> Can we have your name?
+            <input name="username" type="text" id="userName" placeholder="Your Name?">
+          </span>
+        </label>
+        <br><br>
+        <label>
+          <span>Can we have your email?
+            <input name="email" type="email" placeholder="Your email address?">
+          </span>
+          <br><br>
+        </label>
+       <!-- this button below 'start your meme' uses an inline option (A) (video 9.3.3) least fovorite/not rcommended
+      did for practice-->
+        <button name="startYourMeme" type="submit" id="startYourMeme">Let's Start</button
+          >
+        </form>
+        <br><br>
+    </header>
+
+    <section name="sectionTest" type="SectionFormTest" id="formContainerTest" class="meme-containerTest">
+      <form id="searchGoogleNow" method="get" class="memeSearchForm" action="https://google.com/search">
+        <h2>Step 1: Leave our site and Search the internet for a picture for your meme. 
+           Once you find an image you like, right-click and choose 'save image address'</h2>
+           <div class = "wrapperLeave show">
+           <input name="q" type="text" id="search" placeholder="Type to search" autocomplete="chrome-off">
+            <button><i class="fa fa-search" name="searchButton" id="searchButton" type="submit"></i></button>
+            <div class="resultsLeave" id="divForListItems">
+              </div>
+            </div>
+        
+      </form>
+
+        <h2>Or stay on this site and use Google Search remotely (click on image tab)</h2>
+        <div class ="container" >
+
+              <div class = "wrapper show">
+                
+                <!--the code below with asynch works using liveserver but not running local from C drive-->
+                <!--tied google programming to google.com and unsplash.com (look at thier dev tools)-->
+                <script async src="https://cse.google.com/cse.js?cx=94de31694b2e74d2c"></script>
+                <div class="gcse-search">
+  
+                </div>
+                
+                
+          <!--</form>-->
+                <div class="results">
+                 
+                </div>
+            </div>
+          </div>
+        </section> 
+
+        <br>
+      
+    <!--create a section with class name to hold our form-->
+    <section name="sectionForForm" type="SectionForm" id="formContainer" class="meme-container">
+      
+      <form id="meme-form" >
+        
+        <label>
+            
+          Step 2: Paste Image URL Address here: 
+            <!--should have browser open a new window for search
+              could go back and add tootip when user hovers over words Click Me
+              https://www.youtube.com/watch?v=xKrufbC8no0
+            -->
+            <br>
+            
+          <input name="URL" type="text" id="meme-url" placeholder="https://Enter URL here" required>
+                
+                 
+        </label>
+        <br>
+        <br>
+        <label>
+          Step 3: Enter Funny Text On Top Of Image:
+          <input name="funnyTextTop" type="text" id="text-topOfImage" placeholder="Enter funny intro header here"
+          required>
+        </label>
+        <br>
+        <br>
+        <label>
+          Step 4: Enter Funny Text On Bottom Of Image:
+          <input name="funnyTextBottom" type="text" id="bottomOfImage" placeholder="Enter funny punchline here"
+          required>
+        </label>
+        <br>
+        <br>
+        <!--Generate Meme functions using 9.3.4 event Listener (see js.app) which is Obtion C from 9.3.3 -->
+        
+        <button name="generateMemeButton" type="submit" id="meme-submit">Generate Meme 😄 </button> <!--https://www.alt-codes.net/smiley_alt_codes.php -->
+      </form>
+    
+    </section>
+
+        <h3> Here is your meme<h3>
+        
+
+  
+
+  <section name="sectionForFormOutput" type="SectionFormOutput" id="formContainerOutput" class="meme-container-Output">
+       
+    
+  
+  </section>
+  <br><br>
+  
+
+<form id="happyRange">
+  How happy are you with this Meme Generator?
+  <input name="happy" type="range" id="rangeInput" min="1" max="10">
+  <p>Value: <output id="value"></output></p>
+
+
+  <br><br>
+  <!-- this button below 'submitFeedbackButton' attaches the name of function to an element id option (B)
+     (video 9.3.3) 2nd least fovorite/not rcommended
+      did for practice
+    Note:I could not get to work passing the range values back to alert message
+     for now uses option A in 9.3.3-->
+  <button name="submitFeedbackButton" type="submitFeebdackType" id="submitFeedbackID">Submit Feedback</button>
+</form>
+
+
+</body>
+
+<script type="text/javascript" src="app.js"></script> <!--future unit 9.3.5 says you can 1, put at end of body (most common) or 
+  2. add an event listener to top of JS to wait for dom to load or 3. or add event listener to load everything based on window being loaded-->
+  
+
+</html>
+<br><br>
+<!-- could put about link at bottom of page for about-->
+<a href="about.html" id="AboutUsLink">See Our About Page</a>
+

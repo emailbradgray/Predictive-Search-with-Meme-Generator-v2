@@ -1,0 +1,324 @@
+/*Selectors- simplist selector, selecting on type of element [* is simpler and applies to all elements, but never used*/
+/*Selectors-here the h1 css would apply to all h1's, unless specificity takes precedence lower down*/
+
+.meme-containerTest > form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  border: 2px solid darkgrey;
+  flex: 1;
+  padding: 5px;
+  background-color: rgb(211,211,211);
+}
+
+
+.wrapperLeave {
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.15);
+  position: relative;
+  width: flex;
+}
+
+.resultsLeave {
+  padding: 0px;
+}
+
+.resultsLeave ul {margin: 0; padding: 0; }
+.results ul li {
+  list-style: none;
+  border-radius: 3px;
+  opacity: 0;
+  display: none;
+  padding: 8px 12px;
+  transition: all .5s linear;
+}
+
+.show .resultsLeave ul li {
+  opacity: 1;
+  display: flex;
+}
+
+.show .resultsLeave {
+  padding: 10px;
+}
+
+.resultsLeave ul li:hover {
+  background:  rgb(241, 238, 8);
+ 
+}
+
+button i {
+  width: 25px;
+  color: #6d7b98;
+  line-height: 10px;
+  font-size: 1px;
+  background: #ffffff;
+  
+  position: relative;
+
+}
+
+#searchButton {
+  
+  font-size: 2em;
+
+    border-radius: 0px;
+    opacity: 100%;
+    
+    color: rgb(66, 133, 244);
+    background-color: #ffffff;
+    max-width: 0px;
+    min-width: 0px;
+    border: 0px solid black
+}
+
+.wrapper {
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.15);
+  position: relative;
+  width: flex;
+}
+
+.results {
+  padding: 0px;
+}
+
+.results ul {margin: 0; padding: 0; }
+.results ul li {
+  list-style: none;
+  border-radius: 3px;
+  opacity: 0;
+  display: none;
+  padding: 8px 12px;
+  transition: all .5s linear;
+}
+
+.show .results ul li {
+  opacity: 1;
+  display: block;
+}
+
+.show .results {
+  padding: 10px;
+}
+
+.results ul li:hover {
+  background:  rgb(241, 238, 8);
+ 
+}
+
+
+
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  /*text decoration 3.1.13 in curriculum*/
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 2px;
+}
+/*Selectors-selecting an element by using id attribute*/
+/*Selectors-here the buttom with id submitFeedbackID would be styled with CSS, unless specificity takes precedence lower down*/
+#submitFeedbackID {
+  color: rgb(22, 228, 50); 
+}
+#submitFeedbackID:hover{
+  background-color: blue;
+}
+
+/*Box Model - 3.3.2 open browser, right click inspect, see elements in console, hover over/cleck to see the boxes around elements*/
+/*scroll to bottom of console to see the box model assigned to element you clicked on*/
+/*tools to help see impacts for border, paddding, margin, etc https://developer.mozilla.org/en-US/docs/Web/CSS/padding-right/*/
+body {
+    margin: 14%;
+    margin-top: 40px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    /* fontstack.com*/
+    /*google fonts - see h1 element style on index.html*/
+    background-color: rgb(241, 238, 8);
+  
+    width: flex;
+  }
+  }
+
+  
+ 
+  header > h1 {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 3em;
+    <!--see curriculum 3.1.10 for em versus rem --> 
+    color: grey;
+    
+  }
+
+/*Selectors - created section to hold our form in HTML and gave it class name of meme-container*/
+/*Selectors-here the Section with class name .meme-container would be styled with CSS, unless specificity takes precedence lower down*/
+  .meme-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    background-color: rgb(211,211,211);
+    color: black;
+    font-size: 1.4em;
+  }
+
+
+  .meme-container-Output {
+    display: flex;
+    width: flex;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+    color: rgb(185, 97, 178);
+    font-size: 2.0em;
+    font-family: 'Great Vibes', cursive;
+    text-align: center;
+    color:rgb(132, 62, 224);
+    border: 3px solid black
+    
+  }
+____------------------
+  .meme-container-Output > div {
+    display:flex;
+    width: flex;
+    height:flex;
+    background-color: rgb(255, 255, 255);
+    
+    
+  }
+  
+
+  .meme-container-Output > div > img {
+    position: relative;
+    width: 100%;
+
+  }
+
+  .meme-container-Output > div > button {
+    font-size: .5em;
+    -webkit-border-radius: 30px 12px;
+    -moz-border-radius: 30px / 12px;
+    -webkit-box-shadow: 2px 2px 6px rgba(60, 214, 46, 1); 
+    /*https://www.the-art-of-web.com/css/border-radius/#:~:text=The%20border%2Dradius%20property%20in,horizontal%20and%20vertical%20length%20settings.*/
+    border-radius: 30px;
+    background-color: rgb(150,150,150);
+    color: white;
+    max-width: flex;
+    min-width: 230px;
+    border: 3px solid black;
+     }
+
+
+  
+  ________________________--------------------
+
+  .meme-container > form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    border: 2px solid darkgrey;
+    flex: 1;
+    padding: 5px;
+  }
+
+  .meme-container-Output > form {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid darkgrey;
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .meme-container > form > label {
+    padding: 10px;
+    padding-left: 0px;
+    font-size: 1.3em;
+  }
+
+  
+
+  button {
+    font-size: 2em;
+    -webkit-border-radius: 30px 12px;
+    -moz-border-radius: 30px / 12px;
+    -webkit-box-shadow: 2px 2px 6px rgba(60, 214, 46, 1); 
+    /*https://www.the-art-of-web.com/css/border-radius/#:~:text=The%20border%2Dradius%20property%20in,horizontal%20and%20vertical%20length%20settings.*/
+    border-radius: 30px;
+    background-color: rgb(150,150,150);
+    color: white;
+    max-width: 500px;
+    min-width: 230px;
+    border: 3px solid black
+  }
+  
+  button:hover{
+    background-color: rgb(77, 204, 162);
+    /*https://codepen.io/search/pens?q=+button+hover+animation*/
+
+    /*more practice with google fonts, see comments in HTML Head*/
+    font-family: 'Permanent Marker', cursive;
+  }
+
+  /*practice with psuedo class hover over something not a button (a link) 3.3.10*/
+  #AboutUsLink:hover{
+    font-family: 'Permanent Marker', cursive
+  }
+  
+  input {
+    /*-webkit-border-radius: 30px;
+    -moz-border-radius: 30px;*/
+    border-radius: 30px;
+    padding: 3px;
+    padding-left: 10px;
+    font-size: 1.3em;
+  }
+
+  /*practice with psuedo class focus over something not a button (an input) 3.3.10*/
+  input:focus {
+    background-color: rgb(241, 238, 8)
+
+  }
+  
+  h3 {
+    font-size: 1.5em;
+  }
+  
+  #meme-submit {
+    width: 300px;
+    align-self: center;
+  }
+
+  /*test */
+  .meme-container > button {
+    display: flex;
+    
+    position: relative;
+
+    align-self: center;
+
+  
+    
+  }
+
+  nav {
+    hieght: 80px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav a {
+    font-size: 1.5em;
+  }
+  
+  /*other notes,
+Selectors- descendents - nesting- nav a - would be format to select all anchor tags in a nav element (curriculum 3.2.5)
+Selectors - adjacent or combinator - nesting - h2 + p - would be format a paragraph right after a H2
+Selectors - Direct Child or combinator - nesting - section > h2 - would be format all h2 of section element (3.2.7)
+
+Selectors - by attribute - input[type="text"]{background-color: color;} 3.2.11 
+
+Specificity 3.2.12
+*/
